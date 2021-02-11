@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A3AC37F-DFEA-4C09-9F07-11562490E934}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PoplWS</RootNamespace>
+    <AssemblyName>PoplWS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <DocumentationFile>bin\PoplWS.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GEOVAP, spol. s r.o.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PoplWS.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PersistClass\P_ODPADY_BYDLIC.cs" />
+    <Compile Include="PersistClass\P_ODPADY_MAJITEL.cs" />
+    <Compile Include="PersistClass\P_ODPADY_EULEVY.cs" />
+    <Compile Include="PersistClass\P_ODPADY_KONFIG.cs" />
+    <Compile Include="PersistClass\C_KALENDAR.cs" />
+    <Compile Include="PersistClass\C_EVPOPL.cs" />
+    <Compile Include="PersistClass\C_NAZPOPL.cs" />
+    <Compile Include="PersistClass\C_PERIODA.cs" />
+    <Compile Include="PersistClass\C_PES_BARVA.cs" />
+    <Compile Include="PersistClass\C_PES_PLEMENO.cs" />
+    <Compile Include="PersistClass\C_TERMPLAC.cs" />
+    <Compile Include="PersistClass\DUAL.cs" />
+    <Compile Include="PersistClass\PES_MAJITEL.cs" />
+    <Compile Include="PersistClass\PES_PES.cs" />
+    <Compile Include="PersistClass\P_ADRESA_ROBRHS.cs" />
+    <Compile Include="PersistClass\P_C_TYPDANE.cs" />
+    <Compile Include="PersistClass\P_DPH_SAZBA.cs" />
+    <Compile Include="PersistClass\P_EXTAPP_POPL.cs" />
+    <Compile Include="PersistClass\P_LIKEVS.cs" />
+    <Compile Include="PersistClass\P_NASTAVENI.cs" />
+    <Compile Include="PersistClass\P_PAROVANI.cs" />
+    <Compile Include="PersistClass\P_PLATBA.cs" />
+    <Compile Include="PersistClass\P_POPL_USERS.cs" />
+    <Compile Include="PersistClass\P_PRISTUP_TABLE.cs" />
+    <Compile Include="PersistClass\P_PRPL.cs" />
+    <Compile Include="PersistClass\P_PRPL_DPH.cs" />
+    <Compile Include="PersistClass\P_PR_AKT.cs" />
+    <Compile Include="PersistClass\P_RGP_DPHPSPL.cs" />
+    <Compile Include="PersistClass\P_RGP_DPHSPL.cs" />
+    <Compile Include="PersistClass\P_RGP.cs" />
+    <Compile Include="PersistClass\P_STAT.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="WebClass\PREDPISBase.cs" />
+    <Compile Include="WebClass\STATY_RESP.cs" />
+    <Compile Include="WebClass\STORNO_RESP.cs" />
+    <Compile Include="WebMethod\PlatceSleva.cs" />
+    <Compile Include="WebMethod\DejPlatceKO.cs" />
+    <Compile Include="WebMethod\DejPlatce.cs" />
+    <Compile Include="WebMethod\DejPredpisy.cs" />
+    <Compile Include="WebMethod\DejStaty.cs" />
+    <Compile Include="WebMethod\PlatceUpdate.cs" />
+    <Compile Include="PoplWS.asmx.cs">
+      <DependentUpon>PoplWS.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\copy.cs" />
+    <Compile Include="Utils\DBUtil.cs" />
+    <Compile Include="Utils\DBValue.cs" />
+    <Compile Include="Utils\DPHRozpis.cs" />
+    <Compile Include="Utils\ExtensionMethodString.cs" />
+    <Compile Include="Utils\ExtensionMethodXPOSelectedData.cs" />
+    <Compile Include="Utils\LogSoap.cs" />
+    <Compile Include="Utils\Math.cs" />
+    <Compile Include="Utils\PoplOracleConnectionProvider.cs" />
+    <Compile Include="Utils\XPOConnector.cs" />
+    <Compile Include="WebClass\OSOBA.cs" />
+    <Compile Include="WebClass\OSOBA_RESP.cs" />
+    <Compile Include="WebClass\PES.cs" />
+    <Compile Include="WebClass\PESPLEMENO_RESP.cs" />
+    <Compile Include="WebClass\PES_RESP.cs" />
+    <Compile Include="WebClass\PLATBA.cs" />
+    <Compile Include="WebClass\PLATCE.cs" />
+    <Compile Include="WebClass\PLATCE_RESP.cs" />
+    <Compile Include="WebClass\PREDPIS.cs" />
+    <Compile Include="WebClass\PREDPIS_RESP.cs" />
+    <Compile Include="WebMethod\DejOsobu.cs" />
+    <Compile Include="WebMethod\DejPsiPlemena.cs" />
+    <Compile Include="WebMethod\DejSeznamPoplatku.cs" />
+    <Compile Include="WebMethod\DejPsiSeznam.cs" />
+    <Compile Include="WebMethod\DejUhradyPar.cs" />
+    <Compile Include="WebMethod\DejUhradyVS.cs" />
+    <Compile Include="WebMethod\OsobaInsert.cs" />
+    <Compile Include="WebMethod\DejUhradaPredpisu.cs" />
+    <Compile Include="WebMethod\PlatceInsert.cs" />
+    <Compile Include="WebMethod\PredpisInsert.cs" />
+    <Compile Include="WebMethod\PlatbaInsert.cs" />
+    <Compile Include="WebMethod\PredpisStorno.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GEOVAP, spol. s r.o.snk" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4929</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="test" nillable="true" type="test" />
+  <xs:complexType name="test">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="UHRADY" type="ArrayOfPLATBA" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ERRORMES" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="result" type="Result" use="required" />
+    <xs:attribute name="status" type="Status" use="required" />
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPLATBA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PLATBA" nillable="true" type="PLATBA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PLATBA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="VS" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DATUM_UHRADY" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="KC" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DATUM_NA_UCET" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SS" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BANKA_KOD" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BANKA_UCET" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ZAPLATIL" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DOKLAD" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="POZNAMKA" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Result">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERROR" />
+      <xs:enumeration value="OK" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ERROR" />
+      <xs:enumeration value="INSERTED" />
+      <xs:enumeration value="EXISTS" />
+      <xs:enumeration value="NONEXISTS" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
